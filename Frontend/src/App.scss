@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --border-color: #e5e7ec;
+  --panel-color: #f9fafb;
+  --button-color: #3b82f6;
+  --button-hover-color: #76a8f9;
+  --button-selected-color: #eaf2ff;
+  --background-color: #ffffff;
+  --text-color: #161e2b;
+  --subtext-color: #90969e;
+  --error-color: rgb(216, 45, 7);
+
+  --title-font-weight: 500;
+  --text-font-weight: 400;
+
+  --title-font-size: 32px;
+  --subtitle-font-size: 24px;
+  --text-font-size: 16px;
+
+  --max-width: 1366px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Space Grotesk", sans-serif;
+
+  .link {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .text {
+    font-size: var(--text-font-size);
+    font-weight: var(--text-font-weight);
+    color: var(--text-color);
+  }
+
+  .subtext {
+    font-size: var(--text-font-size);
+    font-weight: var(--text-font-weight);
+    color: var(--subtext-color);
+  }
+
+  .subtitle {
+    font-size: var(--subtitle-font-size);
+    font-weight: var(--text-font-weight);
+    color: var(--text-color);
+  }
+
+  .label {
+    font-size: calc(var(--text-font-size) - 3px);
+    font-weight: 400;
+    color: var(--subtext-color);
+  }
+
+  .title {
+    font-size: var(--title-font-size);
+    font-weight: var(--title-font-weight);
+    color: var(--text-color);
+  }
+
+  .text-button {
+    font-size: var(--text-font-size);
+    font-weight: var(--text-font-weight);
+    color: var(--background-color);
+    background-color: var(--button-color);
+    padding: 0 24px;
+    height: 37px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    border: none;
+    border-radius: 8px;
+
+    cursor: pointer;
+    transition: background-color 0.1s ease-in-out;
+  }
+
+  .text-button svg {
+    width: auto;
+    height: calc(100% - 20px);
+  }
+
+  .text-button path {
+    fill: var(--background-color);
+  }
+
+  .text-button.selected {
+    background-color: var(--panel-color);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    cursor: default;
+  }
+
+  .text-button.selected path {
+    fill: var(--text-color);
+  }
+
+  .text-button:hover {
+    background-color: var(--button-hover-color);
+  }
+
+  .text-button.selected:hover {
+    background-color: var(--panel-color);
+  }
+
+  .img-button {
+    width: 37px;
+    height: 37px;
+    object-fit: cover;
+    border-radius: 8px;
+
+    cursor: pointer;
+  }
+}
